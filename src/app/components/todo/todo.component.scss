@@ -1,0 +1,85 @@
+.to-do{
+    width: auto;
+    border-radius: 10px;
+    display: flex;
+    // background: #ffffff;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    background-color: #ffffff;
+    &.to_do{
+        background-color: #f6f6f6;
+    }
+    &.in_progress{
+        background: radial-gradient(circle, rgba(237,238,174,1) 0%, rgba(232,238,169,1) 100%);
+    }
+    &.done{
+        background: radial-gradient(circle, rgba(174,238,189,1) 0%, rgba(174,238,169,0.6460959383753502) 100%);
+    }
+    .name {
+        height: 100%;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+    .description{
+        height: 100%;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        word-wrap: break-word
+    }
+    .time{
+        height: 100%;
+        justify-content: center;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    .type{
+        height: 100%;
+        justify-content: center;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        margin-top: 20px;
+        .text-field{
+            width: 100%;
+        }
+    }
+    .button{
+        height: 100%;
+        border-radius: 10px;
+        width: 80px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        .bttn-delete{
+            width: 30px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#ffffff;
+            background-color: #000000;
+            font-size: 11px;
+        }
+        .bttn-update{
+            width: 30px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#000000;
+            background-color: #f6f6f6;
+            font-size: 11px;
+        }
+    }
+}

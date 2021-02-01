@@ -1,0 +1,31 @@
+<div class={{getColor()}}>
+    <div class="name">{{toDo?toDo.name:""}}</div>
+    <div class="description">{{toDo?toDo.description:""}}</div>
+    <div class="type">
+          <mat-form-field appearance="fill">
+            <mat-label>სტატუსი</mat-label>
+            <mat-select [(value)]="toDo.type">
+              <mat-option *ngFor="let todo of ToDoTypeValues" value={{todo.key}} disabled={{isDisabled(todo.key)}}>
+                {{todo.value}}              
+            </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div class="time">
+        {{toDo?toDo.time:""}} წთ
+    </div>
+    <div class="type">
+        <mat-form-field class="text-field" appearance="outline">
+            <mat-label>დავალების შემსრულებელი</mat-label>
+            <input matInput type="text" value={{toDo.userName}} (input)="setUsername($any($event.target).value)">
+        </mat-form-field>
+    </div>
+    <div class="button delete">
+        <button mat-raised-button color="primary" class="bttn-delete" (click)="deleteToDo(toDo._id)">წაშლა</button>
+    </div>
+    <div class="button update">
+        <button mat-raised-button color="primary" class="bttn-update" (click)="updateToDo()">განახლება</button>
+    </div>
+    
+</div>
+

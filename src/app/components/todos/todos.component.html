@@ -1,0 +1,14 @@
+<div id="todos">
+    <div class="welcome">გამარჯობა, {{name}}!</div>
+    <div class="content">
+        <app-create-todo></app-create-todo>
+        <div *ngFor = "let e of todos">
+            <app-todo [toDo]=e></app-todo>
+        </div>
+    </div>
+    <!-- <tr *ngFor="let e of todos?todos:null;"> 
+        <td>{{ e.name }}</td> 
+        <td>{{ e._id }}</td> 
+    </tr>
+     -->
+</div>

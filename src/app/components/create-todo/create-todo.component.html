@@ -1,0 +1,32 @@
+<div class="create-todo">
+    <div class="name">To-Do-ს დამატება</div>
+    <div class="content">
+        <div class="field">
+                <mat-form-field class="text-field" appearance="outline">
+                  <mat-label>To-Do-ს სახელი</mat-label>
+                  <input matInput type="text" value="" (input)="changeName( $any($event.target).value)">
+                </mat-form-field>
+        </div>
+        <div class="field">
+            <mat-form-field class="text-field" appearance="outline">
+                <mat-label>აღწერა</mat-label>
+                <input matInput type="text" value="" (input)="changeDescription( $any($event.target).value)">
+            </mat-form-field>
+        </div>
+        <div class="field">
+            <mat-form-field class="text-field" appearance="outline">
+                <mat-label>დრო(წთ)</mat-label>
+                <input matInput type="number" value="" (input)="changeTime( $any($event.target).value)">
+            </mat-form-field>
+        </div>
+        <div class="field">
+            <mat-form-field class="text-field" appearance="outline">
+                <mat-label>დავალების შემსრულებელი</mat-label>
+                <input matInput type="text" value="" (input)="changeUserName( $any($event.target).value)">
+            </mat-form-field>
+        </div>
+        <div class="field">
+            <button mat-flat-button color="primary" class="button-style" (click)="createToDo()">შექმნა!</button>
+        </div>
+    </div> 
+</div>

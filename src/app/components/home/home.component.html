@@ -1,0 +1,14 @@
+<div id="home">
+    <div class="body">
+    <div class="title">გთხოვთ, შეიყვანეთ თქვენი მომხმარებლის სახელი!</div>
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>username</mat-label>
+          <input matInput type="text" value="" (input)="setName($any($event.target).value)">
+        </mat-form-field>
+    </form>
+    <div class="example-button-row">
+        <button mat-flat-button color="primary" class="button-style" routerLink="/to-dos" disabled={{!name}}>დადასტურება</button>
+      </div>
+    </div>
+</div>
