@@ -1,4 +1,4 @@
-const HOST = 'https://mysterious-caverns-02535.herokuapp.com/';
+const HOST = 'http://localhost:3000/';
 export const API_ROUTES = {
         routes:{
             to_do:{
